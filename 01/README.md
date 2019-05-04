@@ -94,3 +94,13 @@ https://github.com/
 需要自己的服务器搭建 公司搭建
 
 http://g.ranyunlong.com/users/sign_in
+
+# 4-1904
+4阶段的课堂案例仓库
+
+### git 忽略文件上传
+
+规则就是文件 直接文件名称就可以
+目录 后面跟一个/
+
+要在git add 和git commit 命令之前去忽略文件
