@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    li{
+        list-style: none;
+    }
+    span{
+        margin: 10px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+     <!-- 
+            v-for=""
+            v-for=""
+            循环对象
+             下标是对象的key
+
+            循环数组
+             下标是数组的index
+
+            循环次数
+             循环的对象就是数字
+         -->
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in list">
+                <span v-for="(a,b) in item">{{b}}:{{a}}</span>
+            </li>
+        </ul>
+        <!-- 99乘法表 -->
+        <div id="app">
+                <div v-for="n in 9">
+                   <apan v-for="m in n">
+                       {{m}}*{{n}}={{m*n}}
+                   </apan>
+                </div>
+            </div>
+    </div>
+
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                list: [
+                    {
+                        name: "张三",
+                        age: 20
+                    }, 
+                    {
+                        name: "李四",
+                        age: 20
+                    }, 
+                    {
+                        name: "王五",
+                        age: 20
+                    }
+                ]
+            }
+
+        })
+    </script>
+</body>
+
+</html>

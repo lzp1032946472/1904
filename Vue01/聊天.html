@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style: none;
+    }
+    ul{
+        margin-bottom: 10px;
+    }
+    #app{
+        margin: 10px auto;
+    }
+    button{
+        margin-left: 20px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <ul>
+                <li v-for="(item,index) in list">{{item}}<button @click="remove(item,index)">删除</button></li>
+            </ul>
+            <div>
+                <textarea  v-model="text" id="text"></textarea>
+                <button @click="add">保存</button>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                text: '',
+                list: []
+            },
+            methods: {
+                add() {
+                   this.list.push(vm.text); 
+                },
+                remove(item,index){
+                    this.list.splice(index, 1)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
