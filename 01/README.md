@@ -57,9 +57,10 @@ git config user.email --global "您的邮箱"
 
 9. 查看仓库地址
 git remote 删除添加仓库
-1. git remote remove origin 删除origin仓库 
-2. git remote add <仓库名称> <仓库地址> 添加仓库
-3. git remote 查询仓库
+9.1. git remote remove origin 删除origin仓库 
+9.2. git remote add <仓库名称> <仓库地址> 添加仓库  
+ 例如：remote add github https://github.com/lzp1032946472/1904
+9.3. git remote 查询仓库
 
 10. 检查本地仓库是否保存
 没有保存先保存
