@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="tab" >
+            <div class="header">
+                    <div 
+                    v-bind:class="['title',{
+                        activity:index===i
+                    }]" 
+                    v-for="(item,i) in list"
+                    v-on:click="click(i)"
+
+                    >
+                         {{item.title}}
+                    </div>
+            </div>
+           
+            <div class="content" v-for="(item,i) in list" v-if="index===i">
+                {{item.content}}
+            </div>
+        </div>
+    </div>
+    <script>
+        const vm = new Vue({
+            el:"#app",
+            data:{
+                list:[
+                    {
+                        title:"选项卡1",
+                        content:"选项卡内容1"
+                    },
+                    {
+                        title:"选项卡2",
+                        content:"选项卡内容2"
+                    },
+                    {
+                        title:"选项卡3",
+                        content:"选项卡内容3"
+                    },
+                    {
+                        title:"选项卡4",
+                        content:"选项卡内容4"
+                    }
+                    ],
+                index:0
+            },
+            methods:{ //添加事件的处理函数
+                click(i){
+                   this.index=i;
+                },
+            }
+        }) 
+    </script>
+</body>
+</html>

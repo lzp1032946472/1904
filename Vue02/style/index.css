@@ -1,0 +1,21 @@
+#app{
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.header{
+    height: 40px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+}
+.title{
+    width: 20%;
+    border: 1px solid black;
+    line-height: 40px;
+    padding: 0 20px;
+}
+.activity{
+    background: red;
+}
